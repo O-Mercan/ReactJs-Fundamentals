@@ -5,13 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ClassComponentsTutorials from './components/FunctionComponentsTutorials'
 import FunctionComponentsTutorials from './components/FunctionComponentsTutorials';
+import RouterBlog from './RouterBlog';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <ClassComponentsTutorials /> */}
-    <FunctionComponentsTutorials/>
+    {/* <FunctionComponentsTutorials/> */}
+    <BrowserRouter>
+      <RouterBlog />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
