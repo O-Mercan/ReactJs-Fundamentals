@@ -1,13 +1,13 @@
-node -v
-npm -v
-npm install -g create-react-app
-npx create create-react-app blog
-cd blog
-npm start
+node -v.\
+npm -v.\
+npm install -g create-react-app.\
+npx create create-react-app project-name.\
+cd project-name.\
+npm start.\
 
 # Extensions in browser
-React Developer Tools
-React Context DevTool
+React Developer Tools.\
+React Context DevTool.\
 
 # Getting Started with Create React App
 
