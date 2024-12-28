@@ -8,8 +8,11 @@ import FunctionComponentsTutorials from './components/FunctionComponentsTutorial
 import RouterBlog from './RouterBlog';
 // Router
 import { BrowserRouter } from 'react-router-dom';
-import {ThemeProvider} from './ThemeContext'; // Eğer kendi oluşturduğunuz bir dosyadan kullanıyorsanız
+import {ThemeProvider} from './ThemeContext'; 
 
+// Redux
+import { Provider } from 'react-redux'
+import { store } from './store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,10 +21,14 @@ root.render(
     {/* <ClassComponentsTutorials /> */}
     {/* <FunctionComponentsTutorials/> */}
     <BrowserRouter>
-    {/* Context Api import */}
+    {/* Redux Login */}
+  <Provider store={store}>
+
+      {/* Context Api import */}
     <ThemeProvider>
       <RouterBlog />
     </ThemeProvider>
+    </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

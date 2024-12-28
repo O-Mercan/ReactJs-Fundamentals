@@ -5,6 +5,8 @@ npx create create-react-app project-name\
 cd project-name\
 npm start
 
+npm install redux react-redux @reduxjs/toolkit
+
 # Extensions in browser
 React Developer Tools\
 React Context DevTool

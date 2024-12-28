@@ -3,12 +3,28 @@ import background from '../images/Under The Milky Way.jpg'
 
 import '../style.css'
 import { ThemeContext } from '../ThemeContext'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../authSlice'
+
+// Redirect
+
 
 
 
 export default function HeaderFunction() {
 
+  // Context Dark Mode
   const {theme, toggleTheme} = useContext(ThemeContext)
+
+  //Redux Login (Authenticated)
+  const isAuthenticatied= useSelector((state)=> state.auth.isAuthenticatied);
+  const user= useSelector((state) => state.auth.user);
+  const dispatch = useDispatch();
+
+  // Redirect
+  const navigate= useNavigate();
+
 
   {/* start Header */}
     {/* Option 1 (Styling) */}
@@ -95,7 +111,19 @@ export default function HeaderFunction() {
           <a className="nav-link disabled">Disabled</a>
         </li>
       </ul>
-      <button onClick={toggleTheme} className="btn btn-warning ms-2" >  Dark Mode</button>
+      <button onClick={toggleTheme} className="btn btn-warning ms-2" >  </button>
+      {/* 34534534534543 */}
+      {isAuthenticatied ? (
+        <div>
+          navigate('/index')
+                  <p>Welcome, {user.username}</p>
+                  <button onClick={()=> dispatch(logout())}>Logout</button>
+        </div>
+      ): (
+        <Link to="/login" className='ms-2 btn btn-primary'>Login</Link>
+      )
+    }
+      
       {/* Left links */}
     </div>
     {/* Collapsible wrapper */}
