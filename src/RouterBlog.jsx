@@ -18,6 +18,7 @@ function RouterBlog() {
           <Route path={"*"} elementName= {<Navigate to={"/"}/>}/>
         </Routes>
       </div>
+      
       <MainFunction/>
       <FooterFunction/>
 

@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import background from '../images/Under The Milky Way.jpg'
 
 import '../style.css'
-
+import { ThemeContext } from '../ThemeContext'
 
 
 
 export default function HeaderFunction() {
+
+  const {theme, toggleTheme} = useContext(ThemeContext)
 
   {/* start Header */}
     {/* Option 1 (Styling) */}
@@ -93,6 +95,7 @@ export default function HeaderFunction() {
           <a className="nav-link disabled">Disabled</a>
         </li>
       </ul>
+      <button onClick={toggleTheme} className="btn btn-warning ms-2" >  Dark Mode</button>
       {/* Left links */}
     </div>
     {/* Collapsible wrapper */}

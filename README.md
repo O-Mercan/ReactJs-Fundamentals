@@ -3,11 +3,11 @@ npm -v\
 npm install -g create-react-app\
 npx create create-react-app project-name\
 cd project-name\
-npm start\
+npm start
 
 # Extensions in browser
 React Developer Tools\
-React Context DevTool\
+React Context DevTool
 
 # Getting Started with Create React App
 

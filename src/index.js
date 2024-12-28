@@ -6,7 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import ClassComponentsTutorials from './components/FunctionComponentsTutorials'
 import FunctionComponentsTutorials from './components/FunctionComponentsTutorials';
 import RouterBlog from './RouterBlog';
+// Router
 import { BrowserRouter } from 'react-router-dom';
+import {ThemeProvider} from './ThemeContext'; // Eğer kendi oluşturduğunuz bir dosyadan kullanıyorsanız
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +18,10 @@ root.render(
     {/* <ClassComponentsTutorials /> */}
     {/* <FunctionComponentsTutorials/> */}
     <BrowserRouter>
+    {/* Context Api import */}
+    <ThemeProvider>
       <RouterBlog />
+    </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
