@@ -1,0 +1,20 @@
+.backgroundExternal{
+    background-image:url('./images/Under The Milky Way.jpg');
+      background-size:cover;
+      background-position:center;
+      height:50vh;
+      width:100%;
+      background-color:rgb(214, 37, 37);
+      color:white;
+      padding:5rem;
+      opacity:0.8;
+      text-align:center;
+      font-size:3rem;
+}
+
+.specialParag{
+    background-color: black;
+    opacity:0.8;
+    margin-top:3rem;
+    box-shadow: 1px 1px 3px 5px rgba(0, 0, 0, .8);
+}
