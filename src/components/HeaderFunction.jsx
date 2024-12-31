@@ -123,6 +123,42 @@ export default function HeaderFunction() {
         <Link to="/login" className='ms-2 btn btn-primary'>Login</Link>
       )
     }
+
+<li className="nav-item dropdown text-white">
+          <a
+            data-mdb-dropdown-init=""
+            className="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            aria-expanded="false"
+          >
+            Register
+          </a>
+          {/* Dropdown menu */}
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a className="dropdown-item" href="#">
+                Register
+              </a>
+              <Link to="/login" className='ms-2  dropdown-item'>Login</Link>
+              <Link to="/register" className='ms-2  dropdown-item'>Register</Link>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                
+              </a>
+            </li>
+            <li>
+              <hr className="dropdown-divider" />
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Something else here
+              </a>
+            </li>
+          </ul>
+        </li>
       
       {/* Left links */}
     </div>

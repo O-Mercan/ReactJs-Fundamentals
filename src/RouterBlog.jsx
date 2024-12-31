@@ -5,7 +5,7 @@ import MainFunction from './components/MainFunction';
 //Router
 import { Navigate, Route, Routes } from 'react-router-dom';
 // Redux Login
-import LoginForm from './loginForm';
+import LoginForm from '../src/components/login/loginForm';
 
 // RouterBlog
 function RouterBlog() {

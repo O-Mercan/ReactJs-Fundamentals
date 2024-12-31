@@ -3,7 +3,7 @@ import React from 'react'
 export default function FooterFunction() {
   return (
     <div>
-        <footer className="text-center bg-body-tertiary">
+        <footer className=" bg-dark text-center bg-body-tertiary text-white">
   {/* Grid container */}
   <div className="container pt-4">
     {/* Section: Social media */}
@@ -84,7 +84,7 @@ export default function FooterFunction() {
     style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
   >
     © 2020 Copyright:
-    <a className="text-body" href="https://mdbootstrap.com/">
+    <a className="text-body text-white" href="https://mdbootstrap.com/">
       MDBootstrap.com
     </a>
   </div>
