@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ReusabilityTextInput from './ReusabilityTextInput';
 
 function RegisterFrom() {
 
@@ -123,11 +124,10 @@ function RegisterFrom() {
             value={formData.username}
             />
             {errors.username && <p style={{color:'red'}}> {errors.username} </p>}
-
         </div>
 
         {/* // EMAIL */}
-        <div className="form-group mb-4">
+        {/* <div className="form-group mb-4">
             <label htmlFor="email">Email:</label>
             <input 
             type="email" 
@@ -139,10 +139,20 @@ function RegisterFrom() {
             value={formData.email}
             />
             {errors.email && <p style={{color:'red'}}> {errors.email} </p>}
-        </div>
+        </div> */}
+
+        <ReusabilityTextInput
+            label= "Email:"
+            type="email"
+            name="email" 
+            className='form-control'
+            onChange={handleChange}
+            value={formData.email}
+            error={errors.email}
+        />
 
         {/* // PASSWORd */}
-        <div className="form-group mb-4">
+        {/* <div className="form-group mb-4">
             <label htmlFor="re_password">RePassword:</label>
             <input 
             type="password" 
@@ -153,10 +163,22 @@ function RegisterFrom() {
             value={formData.confirmPassword}
             />
             {errors.password && <p style={{color:'red'}}> {errors.password} </p>}
-        </div>
+        </div> */}
+
+        <ReusabilityTextInput
+            label= "Password:"
+            type="password"
+            name="password" 
+            className='form-control'
+            onChange={handleChange}
+            value={formData.password}
+            error={erors.password}
+
+        />
+
 
         {/* // REPASSWORd */}
-        <div className="form-group mb-4">
+        {/* <div className="form-group mb-4">
             <label htmlFor="password">Email:</label>
             <input 
             type="password" 
@@ -168,8 +190,20 @@ function RegisterFrom() {
             value={formData.confirmPassword}
             />
             {errors.confirmPassword && <p style={{color:'red'}}> {errors.confirmPassword} </p>}
-        </div>
+        </div> */}
 
+        <ReusabilityTextInput
+            label= "Re-Password:"
+            type="password"
+            name="confirmPassword" 
+            className='form-control'
+            onChange={handleChange}
+            value={formData.confirmPassword}
+            error={errors.confirmPasswordl}
+        />
+
+
+        {/* Submit */}
         <button className="btn btn-danger">Clear</button>
         <button 
         type="submit"
