@@ -13,8 +13,24 @@ function RegisterFrom() {
     // Loading State
     const[loading,setLoading]=useState(false);
 
+    // Multiple Request State
+    const[multipleRequest,setMultipleRequest]=useState(false);
+
     // Error
     const[errors,setErrors]=useState({});
+
+    // isFormValid
+    const[isFormValid, setIsFormValid] = useState(false);
+
+    // If formData is not empty
+    useEffect(()=> {
+        const {username,email,password,confirmPassword}= formData;
+        if(username && email && password && confirmPassword){
+            setIsFormValid(true)
+        }else {
+            setIsFormValid(false)
+        }
+    },[formData]);
 
     // OnChange All
     const handleChange=(e)=>{
@@ -73,6 +89,9 @@ function RegisterFrom() {
         // Loading start working
         setLoading(true)
 
+        // multiple request
+        setMultipleRequest(false)
+
         //validate
         if(validate()){
             // Loading working
@@ -90,7 +109,7 @@ function RegisterFrom() {
     
     <div>
       <h1 className='text-center display-4 text-primary text-uppercase'>Register</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='mb-4'>
 
         {/* // USERNAME */}
         <div className="form-group mb-4">
@@ -154,7 +173,7 @@ function RegisterFrom() {
         <button className="btn btn-danger">Clear</button>
         <button 
         type="submit"
-        disabled={false}
+        disabled={!isFormValid}
         className="btn btn-primary">
             {(loading)&&
                     <div class="spinner-border text-success" role="status">
