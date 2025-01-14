@@ -7,6 +7,9 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 // Redux Login
 import LoginForm from '../src/components/login/loginForm';
 
+import RegisterForm from './components/register/RegisterForm';
+
+
 // RouterBlog
 function RouterBlog() {
   return ( 
@@ -18,6 +21,7 @@ function RouterBlog() {
           <Route path={"/"} elementName= {<MainFunction/>}/>
           <Route path={"/index"} elementName= {<MainFunction/>}/>
           <Route path={"/login"} elementName={<LoginForm />} />
+          <Route path={"/register"} elementName={<RegisterForm />} />
           <Route path={"*"} elementName= {<Navigate to={"/"}/>}/>
         </Routes>
       </div>

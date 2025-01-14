@@ -1,21 +1,3 @@
-/*
-
-    <div className="form-group mb-4">
-        <label htmlFor="email">Email:</label>
-        <input 
-            type="email" 
-            name="email" 
-            id="email"
-            className='form-control'
-
-            onChange={handleChange}
-            value={formData.email}
-        />
-        {errors.email && <p style={{color:'red'}}> {errors.email} </p>}
-    </div>
-
-*/
-
 import React from 'react'
 
 const ReusabilityTextInput = ({label, type, className, name, value, onChange, error}) =>  {

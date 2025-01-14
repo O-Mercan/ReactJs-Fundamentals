@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReusabilityTextInput from './ReusabilityTextInput';
 
 function RegisterFrom() {
@@ -172,7 +172,7 @@ function RegisterFrom() {
             className='form-control'
             onChange={handleChange}
             value={formData.password}
-            error={erors.password}
+            error={errors.password}
 
         />
 

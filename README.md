@@ -7,6 +7,9 @@ npm start
 
 npm install redux react-redux @reduxjs/toolkit
 
+React UI Libraries
+npm install @mui/material @emotion/react @emotion/styled
+
 # Extensions in browser
 React Developer Tools\
 React Context DevTool
