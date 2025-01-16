@@ -116,7 +116,7 @@ export default function HeaderFunction() {
       {isAuthenticatied ? (
         <div>
           navigate('/index')
-                  <p>Welcome, {user.username}</p>
+                  <p>Welcome, {user.email}</p>
                   <button onClick={()=> dispatch(logout())}>Logout</button>
         </div>
       ): (
