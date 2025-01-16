@@ -3,14 +3,15 @@ import ReusabilityTextInput from './ReusabilityTextInput';
 
 function RegisterFrom() {
 
-    // state
+    // State
     // Form State
     const [formData, setFormData] = useState({
         username:'',
         email:'',
         password:'',
         confirmPassword:'',
-    })
+    });
+
     // Loading State
     const[loading,setLoading]=useState(false);
 
@@ -32,6 +33,10 @@ function RegisterFrom() {
             setIsFormValid(false)
         }
     },[formData]);
+
+    // fetch
+    // axios (npm i axios)
+    //fetch('')
 
     // OnChange All
     const handleChange=(e)=>{
@@ -99,9 +104,31 @@ function RegisterFrom() {
             setLoading(false)
             alert("Registered")
             // Form submission logic here
-            console.log(formData)
+            console.log(formData);
+            console.log(formData.username)
+            console.log(formData.email)
+            console.log(formData.password);
+
+
+            // submit fetch api
+            fetch('https://67894cf72c874e66b7d85403.mockapi.io/api/v1/blog/react-project', {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                },
+                body:JSON.stringifyg({
+                    username: formData.username,
+                    password: formData.password,
+                    email: formData.email,
+                }),
+            }).then(response => response.json())
+            .then(data =>{
+                console.log("Success", data)
+            }).catch(err=>{
+                console.error("ERROR", err)
+            })
         }
-    }
+    };
 
     // Return
   return (
@@ -118,7 +145,6 @@ function RegisterFrom() {
             <input 
             type="text" 
             name="username" 
-            id="username"
             className='form-control'
             onChange={handleChange}
             value={formData.username}
